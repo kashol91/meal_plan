@@ -1,12 +1,12 @@
-class CreateRecipies < ActiveRecord::Migration[6.0]
+class CreateRecipes < ActiveRecord::Migration[6.0]
   def change
-    create_table :recipies do |t|
+    create_table :recipes do |t|
       t.string :name, null: false
       t.text :description, null: false
       t.belongs_to :user, null: false, foreign_key: true
       t.timestamps null: false
     end
 
-    add_index :recipies, [:user_id, :name]
+    add_index :recipes, [:user_id, :name]
   end
 end
