@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :recipe do
-    name { "mom's spegetti" }
-    description { "the best spegetti in the world" }
+    name { Faker::Hipster.sentence }
+    description { Faker::Hipster.paragraph }
     association(:user)
   end
 end
